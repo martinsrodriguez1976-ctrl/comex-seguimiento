@@ -1,0 +1,51 @@
+name: Actualizar seguimiento de comercio exterior
+
+on:
+  schedule:
+    # 13:15 UTC = 10:15 hora Argentina (UTC-3, sin horario de verano)
+    - cron: "15 13 * * *"
+  workflow_dispatch: {} # permite disparar la corrida a mano desde la pestaña Actions
+
+permissions:
+  contents: write
+
+jobs:
+  actualizar:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Instalar dependencias
+        run: |
+          pip install -r scraper/requirements.txt
+          playwright install --with-deps chromium
+
+      - name: Correr scraper
+        run: python scraper/update_data.py
+
+      - name: Commitear cambios (si hay)
+        run: |
+          git config user.name "comex-bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add data/bookings.json data/ultimo_log.txt
+          if git diff --cached --quiet; then
+            echo "Sin cambios en los datos, no se commitea nada."
+          else
+            git commit -m "Actualización automática $(date -u +'%Y-%m-%d %H:%M UTC')"
+            git push
+          fi
+
+      - name: Subir log como artifact
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: log-corrida
+          path: data/ultimo_log.txt
+          retention-days: 30
