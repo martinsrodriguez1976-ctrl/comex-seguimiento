@@ -1,0 +1,4 @@
+Corrida: 2026-09-02T15:56:19.294050+00:00
+- [273895250] No se pudo extraer la ETA (posible cambio de diseño en la web de la naviera). Se mantiene el dato anterior.
+- [ZIMUCRT914428] No se pudo extraer la ETA (posible cambio de diseño en la web de la naviera). Se mantiene el dato anterior.
+- [ZIM BALTIMORE] No se pudo extraer posición de VesselFinder (revisar manualmente).
