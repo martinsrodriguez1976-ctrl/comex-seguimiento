@@ -1,10 +1,12 @@
 name: Actualizar seguimiento de comercio exterior
 
+# El disparo automático por horario quedó desactivado: el primer intento
+# real confirmó que Maersk/ZIM/VesselFinder bloquean el tráfico del
+# runner (headless, datacenter) y el scraper no logra extraer datos.
+# Ver README para el detalle. Se deja "workflow_dispatch" para poder
+# reintentar a mano si en el futuro se resuelve la detección de bot.
 on:
-  schedule:
-    # 13:15 UTC = 10:15 hora Argentina (UTC-3, sin horario de verano)
-    - cron: "15 13 * * *"
-  workflow_dispatch: {} # permite disparar la corrida a mano desde la pestaña Actions
+  workflow_dispatch: {}
 
 permissions:
   contents: write
