@@ -1,0 +1,121 @@
+{
+  "ultimaActualizacion": null,
+  "buques": [
+    {
+      "id": "cap_san_artemissio",
+      "nombre": "MAERSK RUBICON → STEPHANIE C (próximos tramos)",
+      "imo": "—",
+      "rumbo": "Sin datos AIS — contenedor aún no embarcado",
+      "aisHora": "No aplica: contenedor en depósito portuario en Rio de Janeiro desde el 25-ago",
+      "ruta": [
+        {
+          "puerto": "Rio de Janeiro, Brasil",
+          "tipo": "Descarga de MSC Magnum VII (transbordo)",
+          "fecha": "25-ago-2026",
+          "estado": "pasado",
+          "lat": -22.9,
+          "lon": -43.17
+        },
+        {
+          "puerto": "Posición actual",
+          "tipo": "En depósito, Rio de Janeiro — esperando conexión",
+          "fecha": "02-sep-2026",
+          "estado": "actual",
+          "lat": -22.9,
+          "lon": -43.17
+        },
+        {
+          "puerto": "Santos, Brasil",
+          "tipo": "Vía Maersk Rubicon (zarpe Rio 08-sep 19:00)",
+          "fecha": "11-sep-2026 14:00",
+          "estado": "futuro",
+          "lat": -23.98,
+          "lon": -46.3
+        },
+        {
+          "puerto": "Buenos Aires, Argentina",
+          "tipo": "Vía Stephanie C (zarpe Santos 16-sep 20:00) — destino final",
+          "fecha": "20-sep-2026 09:00",
+          "estado": "futuro",
+          "lat": -34.6,
+          "lon": -58.37
+        }
+      ],
+      "bookings": [
+        {
+          "bookingNo": "273895250",
+          "naviera": "Maersk",
+          "proveedorLogistico": "TIBA Colombia S.A.S.",
+          "origen": "Cartagena, Colombia",
+          "destino": "Buenos Aires, Argentina",
+          "contenedores": "10 × 20' Tank",
+          "etaInformada": "20-sep-2026 09:00 (Buenos Aires, Terminal 4)",
+          "estadoNaviera": "En depósito en Rio de Janeiro — Maersk reasignó toda la conexión final: ya no es Itapoa + Cap San Artemissio, ahora es Maersk Rubicon (Rio→Santos) + Stephanie C (Santos→Buenos Aires).",
+          "riesgo": true,
+          "observacion": "Cambio relevante respecto a la corrida anterior: la ETA mejoró 4 días (de 24-sep a 20-sep), pero la espera en Rio se estiró de 10 a 14 días (el próximo zarpe es recién el 08-sep). Dos puntos para seguir de cerca: (1) 'Maersk Rubicon' no aparece en la búsqueda pública de VesselFinder, así que no pudimos verificar su posición por AIS — puede ser un feeder chico sin transpondedor público o un nombre comercial distinto al de matrícula. (2) El buque 'Stephanie C' que Maersk asignó para el tramo Santos→Buenos Aires del 16-sep está, a la fecha de esta consulta, navegando frente a la costa este de EE.UU. (rumbo a Port Everglades, ETA 3-sep) — su regreso a Sudamérica a tiempo para el 16-sep no está confirmado por AIS todavía. Vale la pena reconfirmar con Maersk en la próxima actualización.",
+          "trackingUrl": "https://www.maersk.com/tracking/273895250"
+        }
+      ],
+      "vesselfinder_imo": null,
+      "note_scraping": "Sin IMO verificado por AIS actualmente. El script solo actualiza ETA vía Maersk; la ruta/vessel se revisa a mano."
+    },
+    {
+      "id": "zim_baltimore",
+      "nombre": "ZIM BALTIMORE",
+      "imo": "9395953",
+      "rumbo": "198.2° — 14.0 nudos",
+      "aisHora": "sin ping nuevo hace 3 días (última posición 30-ago-2026 17:15 UTC)",
+      "ruta": [
+        {
+          "puerto": "Cartagena, Colombia",
+          "tipo": "Último puerto (zarpe)",
+          "fecha": "21-ago-2026",
+          "estado": "pasado",
+          "lat": 10.4,
+          "lon": -75.51
+        },
+        {
+          "puerto": "Posición actual",
+          "tipo": "Costa este de Brasil, altura de Maceió (última posición conocida)",
+          "fecha": "02-sep-2026",
+          "estado": "actual",
+          "lat": -9.6,
+          "lon": -35.3
+        },
+        {
+          "puerto": "Santos, Brasil",
+          "tipo": "Próxima escala",
+          "fecha": "03-sep-2026 08:30",
+          "estado": "futuro",
+          "lat": -23.98,
+          "lon": -46.3
+        },
+        {
+          "puerto": "Buenos Aires, Argentina",
+          "tipo": "Destino final",
+          "fecha": "08-sep-2026",
+          "estado": "futuro",
+          "lat": -34.6,
+          "lon": -58.37
+        }
+      ],
+      "bookings": [
+        {
+          "bookingNo": "ZIMUCRT914428",
+          "naviera": "ZIM",
+          "proveedorLogistico": "TIBA Colombia S.A.S.",
+          "origen": "Cartagena, Colombia",
+          "destino": "Buenos Aires, Argentina",
+          "contenedores": "19 × 20' DV (flexibag)",
+          "etaInformada": "08-sep-2026 (Buenos Aires, APM Terminals)",
+          "estadoNaviera": "En tránsito directo — zarpó de Cartagena el 21-ago-2026, sin transbordo informado hasta el momento.",
+          "riesgo": true,
+          "observacion": "El propio tracker de ZIM corrió la ETA de 25-ago a 08-sep-2026 (+14 días) sobre la misma reserva, sin cambio de buque. El Zim Baltimore hace escala en Santos antes de continuar a Buenos Aires; confirmar si esa escala implica transbordo o es solo llamada de puerto en ruta. Carga sensible: 19 flexibags de aceites vegetales, verificar integridad de sellos al arribo. Nota de esta actualización: van 3 días sin ping AIS nuevo en VesselFinder (último dato del 30-ago). Sigue sin ser necesariamente una anomalía, pero si en la próxima corrida tampoco hay dato nuevo, conviene pedirle a ZIM confirmación directa de posición.",
+          "trackingUrl": "https://www.zim.com/tools/track-a-shipment?consnumber=ZIMUCRT914428"
+        }
+      ],
+      "vesselfinder_imo": "9395953",
+      "note_scraping": "IMO verificado. El script actualiza ETA (ZIM) y posición aproximada (VesselFinder) automáticamente."
+    }
+  ]
+}
