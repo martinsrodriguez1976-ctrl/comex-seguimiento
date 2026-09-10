@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-09-09T00:00:00+00:00",
+  "ultimaActualizacion": "2026-09-10T00:00:00+00:00",
   "buques": [
     {
       "id": "cap_san_artemissio",
@@ -100,6 +100,130 @@
       ],
       "vesselfinder_imo": "9395953",
       "note_scraping": "IMO verificado. El script actualiza ETA (ZIM) y posición aproximada (VesselFinder) automáticamente."
+    },
+    {
+      "id": "costa_rica_express",
+      "nombre": "COSTA RICA EXPRESS",
+      "imo": "9641235",
+      "rumbo": "188.9° — 11.3 nudos",
+      "aisHora": "2 días antes de la consulta (08-sep-2026 01:54 UTC)",
+      "ruta": [
+        {
+          "puerto": "Puebla, México",
+          "tipo": "Lugar de aceptación (origen de la carga)",
+          "fecha": "jul-2026",
+          "estado": "pasado",
+          "lat": 19.04,
+          "lon": -98.2
+        },
+        {
+          "puerto": "Veracruz, México",
+          "tipo": "Zarpe confirmado (Actual Vessel Departure)",
+          "fecha": "16-ago-2026",
+          "estado": "pasado",
+          "lat": 19.18,
+          "lon": -96.13
+        },
+        {
+          "puerto": "Posición actual",
+          "tipo": "En tránsito, costa este de Brasil — rumbo a Santos",
+          "fecha": "10-sep-2026",
+          "estado": "actual",
+          "lat": -12.0,
+          "lon": -37.5
+        },
+        {
+          "puerto": "Santos, Brasil",
+          "tipo": "Escala en ruta (según VesselFinder)",
+          "fecha": "12-sep-2026 13:00",
+          "estado": "futuro",
+          "lat": -23.98,
+          "lon": -46.3
+        },
+        {
+          "puerto": "Buenos Aires, Argentina",
+          "tipo": "Destino final (booking DHL)",
+          "fecha": "17-sep-2026 00:01",
+          "estado": "futuro",
+          "lat": -34.6,
+          "lon": -58.37
+        }
+      ],
+      "bookings": [
+        {
+          "bookingNo": "DZI427128",
+          "naviera": "DHL Global Forwarding",
+          "proveedorLogistico": "DHL Global Forwarding",
+          "origen": "Puebla, México (vía Veracruz)",
+          "destino": "Buenos Aires, Argentina",
+          "contenedores": "4 × FCL (162 piezas, 135.331 kg, 360 m³)",
+          "etaInformada": "17-sep-2026 00:01 (Buenos Aires)",
+          "estadoNaviera": "En tránsito — zarpó de Veracruz el 16-ago-2026 a bordo del Costa Rica Express, actualmente rumbo a Santos, Brasil (escala) antes de continuar a Buenos Aires.",
+          "riesgo": false,
+          "observacion": "Booking nuevo cargado en esta corrida. Contenedores: HLBU1052277, HLBU1523628, HLXU5347150, TCLU4124902. Los prefijos HLBU/HLXU corresponden a equipos de Hapag-Lloyd — es probable que Hapag-Lloyd sea la naviera operadora real del buque y DHL Global Forwarding actúe como forwarder que gestiona el booking; vale la pena confirmarlo con DHL. Todavía no se ve nivel de riesgo por demora — la ETA se mantiene relativamente estable respecto al cronograma informado.",
+          "trackingUrl": "https://www.dhl.com/ar-es/home/rastreo.html?tracking-id=DZI427128"
+        }
+      ],
+      "vesselfinder_imo": "9641235",
+      "note_scraping": "IMO verificado. El script puede actualizar posición aproximada (VesselFinder) automáticamente; la ETA de DHL se revisa a mano por ahora."
+    },
+    {
+      "id": "le_havre_express",
+      "nombre": "LE HAVRE EXPRESS",
+      "imo": "9332872",
+      "rumbo": "Buque amarrado (moored) — 0.0 nudos",
+      "aisHora": "16 h antes de la consulta (09-sep-2026 20:43 UTC, arribo a Montevideo)",
+      "ruta": [
+        {
+          "puerto": "Puebla, México",
+          "tipo": "Lugar de aceptación (origen de la carga)",
+          "fecha": "jul-2026",
+          "estado": "pasado",
+          "lat": 19.04,
+          "lon": -98.2
+        },
+        {
+          "puerto": "Veracruz, México",
+          "tipo": "Zarpe confirmado (Actual Vessel Departure)",
+          "fecha": "30-jul-2026",
+          "estado": "pasado",
+          "lat": 19.18,
+          "lon": -96.13
+        },
+        {
+          "puerto": "Montevideo, Uruguay",
+          "tipo": "Posición actual — buque amarrado (moored), arribó acá",
+          "fecha": "09-sep-2026",
+          "estado": "actual",
+          "lat": -34.9,
+          "lon": -56.16
+        },
+        {
+          "puerto": "Buenos Aires, Argentina",
+          "tipo": "Destino final (booking DHL) — cruce corto desde Montevideo",
+          "fecha": "11-sep-2026 00:01",
+          "estado": "futuro",
+          "lat": -34.6,
+          "lon": -58.37
+        }
+      ],
+      "bookings": [
+        {
+          "bookingNo": "DZI427130",
+          "naviera": "DHL Global Forwarding",
+          "proveedorLogistico": "DHL Global Forwarding",
+          "origen": "Puebla, México (vía Veracruz)",
+          "destino": "Buenos Aires, Argentina",
+          "contenedores": "4 × FCL (215 piezas, 179.606 kg, 480 m³)",
+          "etaInformada": "11-sep-2026 00:01 (Buenos Aires)",
+          "estadoNaviera": "En tránsito final — buque actualmente amarrado (moored) en Montevideo, Uruguay (arribó 09-sep 20:43 UTC), a la espera de continuar el cruce corto a Buenos Aires.",
+          "riesgo": true,
+          "observacion": "Booking nuevo cargado en esta corrida, y ya con la alerta más grande que vimos hasta ahora: la ETA original (06-ago-2026, según el registro de eventos de DHL) se corrió más de un mes, a 11-sep-2026. Además, DHL marca 'Consignee / Broker Notified' en Buenos Aires desde el 04-sep-2026 — antes incluso de que el buque llegara a Montevideo (09-sep). Vale la pena confirmar con DHL si esa notificación corresponde realmente a este arribo o es un evento administrativo adelantado, para no generar expectativa de entrega prematura. VesselFinder muestra una ETA a Buenos Aires del '9 de octubre', que no coincide con ningún otro dato disponible — probablemente un placeholder de itinerario estático mal actualizado para este tramo corto Montevideo→Buenos Aires, no lo tomamos como válido. Contenedores: DRYU4017323, HLBU1055424, HLBU1790732, HLBU1797450 (el prefijo HLBU sugiere Hapag-Lloyd como naviera operadora real, igual que en el booking DZI427128).",
+          "trackingUrl": "https://www.dhl.com/ar-es/home/rastreo.html?tracking-id=DZI427130"
+        }
+      ],
+      "vesselfinder_imo": "9332872",
+      "note_scraping": "IMO verificado. El script puede actualizar posición aproximada (VesselFinder) automáticamente; la ETA de DHL se revisa a mano por ahora."
     }
   ]
 }
