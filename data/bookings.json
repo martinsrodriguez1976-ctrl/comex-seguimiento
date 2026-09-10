@@ -1,5 +1,5 @@
 {
-  "ultimaActualizacion": "2026-09-07T00:00:00+00:00",
+  "ultimaActualizacion": "2026-09-09T00:00:00+00:00",
   "buques": [
     {
       "id": "cap_san_artemissio",
@@ -63,8 +63,8 @@
       "id": "zim_baltimore",
       "nombre": "ZIM BALTIMORE",
       "imo": "9395953",
-      "rumbo": "198.2° — 14.0 nudos",
-      "aisHora": "sin ping nuevo hace 3 días (última posición 30-ago-2026 17:15 UTC)",
+      "rumbo": "Arribado — buque en puerto",
+      "aisHora": "No aplica: llegó a destino",
       "ruta": [
         {
           "puerto": "Cartagena, Colombia",
@@ -75,26 +75,10 @@
           "lon": -75.51
         },
         {
-          "puerto": "Posición actual",
-          "tipo": "Costa este de Brasil, altura de Maceió (última posición conocida)",
-          "fecha": "02-sep-2026",
-          "estado": "actual",
-          "lat": -9.6,
-          "lon": -35.3
-        },
-        {
-          "puerto": "Santos, Brasil",
-          "tipo": "Próxima escala",
-          "fecha": "03-sep-2026 08:30",
-          "estado": "futuro",
-          "lat": -23.98,
-          "lon": -46.3
-        },
-        {
           "puerto": "Buenos Aires, Argentina",
-          "tipo": "Destino final",
-          "fecha": "08-sep-2026",
-          "estado": "futuro",
+          "tipo": "Arribo confirmado (ATA) — Terminal APM",
+          "fecha": "09-sep-2026",
+          "estado": "actual",
           "lat": -34.6,
           "lon": -58.37
         }
@@ -107,10 +91,10 @@
           "origen": "Cartagena, Colombia",
           "destino": "Buenos Aires, Argentina",
           "contenedores": "19 × 20' DV (flexibag)",
-          "etaInformada": "08-sep-2026 (Buenos Aires, APM Terminals)",
-          "estadoNaviera": "En tránsito directo — zarpó de Cartagena el 21-ago-2026, sin transbordo informado hasta el momento.",
-          "riesgo": true,
-          "observacion": "El propio tracker de ZIM corrió la ETA de 25-ago a 08-sep-2026 (+14 días) sobre la misma reserva, sin cambio de buque. El Zim Baltimore hace escala en Santos antes de continuar a Buenos Aires; confirmar si esa escala implica transbordo o es solo llamada de puerto en ruta. Carga sensible: 19 flexibags de aceites vegetales, verificar integridad de sellos al arribo. Nota de esta actualización: van 3 días sin ping AIS nuevo en VesselFinder (último dato del 30-ago). Sigue sin ser necesariamente una anomalía, pero si en la próxima corrida tampoco hay dato nuevo, conviene pedirle a ZIM confirmación directa de posición. Nota de esta corrida: la web de ZIM devolvió un desafío anti-bot (Akamai) al consultar el tracking; no se pudo verificar si hubo cambios. Dato mostrado es el de la última corrida confirmada (08-sep). Reintentar la próxima vez, manualmente si vuelve a bloquear.",
+          "etaInformada": "09-sep-2026 (ATA confirmado — Buenos Aires, APM Terminals)",
+          "estadoNaviera": "Entregado — contenedores descargados en Buenos Aires el 09-sep-2026 17:55. Ruta directa Cartagena→Buenos Aires, sin transbordo, tal como estaba reservado originalmente.",
+          "riesgo": false,
+          "observacion": "Cierre de este booking: llegó 1 día después de la última ETA vigente (08-sep → arribo real 09-sep), desvío menor. El Zim Baltimore hizo el tramo directo sin escalas de transbordo — el paso por Santos que se había anotado como posible escala terminó siendo solo una llamada de puerto en ruta, no un transbordo. Contenedores ya descargados; queda pendiente el retiro físico y el chequeo de sellos en destino (recordatorio: carga sensible, 19 flexibags de aceites vegetales). Este booking puede pasarse a 'cerrado/histórico' en la próxima limpieza del reporte una vez que TIBA confirme el retiro.",
           "trackingUrl": "https://www.zim.com/tools/track-a-shipment?consnumber=ZIMUCRT914428"
         }
       ],
